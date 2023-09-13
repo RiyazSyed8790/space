@@ -12,7 +12,35 @@ export default function Navbar(){
    function clickHandler(e){
         console.log(e);
         setIsActive(e);
-        
+        switch(e){
+            case 1:
+                document.getElementById("homescreen").classList.add("md:bag-desk","sm:bag-tab","bag-mob");
+                document.getElementById("homescreen").classList.remove("md:bag-dest-desk","sm:bag-dest-tab","bag-dest-mob");
+                document.getElementById("homescreen").classList.remove("md:bag-crew-desk","sm:bag-crew-tab","bag-crew-mob");
+                document.getElementById("homescreen").classList.remove("md:bag-tech-desk","sm:bag-tech-tab","bag-tech-mob");
+                break;
+            case 2:
+                document.getElementById("homescreen").classList.add("md:bag-dest-desk","sm:bag-dest-tab","bag-dest-mob");
+                document.getElementById("homescreen").classList.remove("md:bag-desk","sm:bag-tab","bag-mob");
+                document.getElementById("homescreen").classList.remove("md:bag-crew-desk","sm:bag-crew-tab","bag-crew-mob");
+                document.getElementById("homescreen").classList.remove("md:bag-tech-desk","sm:bag-tech-tab","bag-tech-mob"); 
+                break;  
+            case 3:
+                document.getElementById("homescreen").classList.add("md:bag-crew-desk","sm:bag-crew-tab","bag-crew-mob");
+                document.getElementById("homescreen").classList.remove("md:bag-desk","sm:bag-tab","bag-mob");
+                document.getElementById("homescreen").classList.remove("md:bag-dest-desk","sm:bag-dest-tab","bag-dest-mob");
+                document.getElementById("homescreen").classList.remove("md:bag-tech-desk","sm:bag-tech-tab","bag-tech-mob");
+                break;
+            case 4:
+                document.getElementById("homescreen").classList.add("md:bag-tech-desk","sm:bag-tech-tab","bag-tech-mob");
+                document.getElementById("homescreen").classList.remove("md:bag-desk","sm:bag-tab","bag-mob");
+                document.getElementById("homescreen").classList.remove("md:bag-dest-desk","sm:bag-dest-tab","bag-dest-mob");
+                document.getElementById("homescreen").classList.remove("md:bag-crew-desk","sm:bag-crew-tab","bag-crew-mob");
+                break;        
+            default:
+                document.getElementById("homescreen").classList.add("md:bag-desk");
+                break;             
+        } 
     }
     function menutoggle(){
         setMenu(prev=>!prev);
@@ -28,10 +56,10 @@ export default function Navbar(){
             {menu?<div  style={menu?{display:"flex"}:{display:"none"}} className="bg-opacity-5  bg-gray-100 backdrop-blur-lg flex-col items-center  px-6 py-6 min-h-screen w-full  ">
                 <span className="flex justify-end py-3  text-xl w-full"><CrossLogo click={menutoggle} /></span>
                 <div className=" my-6 flex flex-col  w-full h-full barlow text-white child:mx-2 child:my-4 ">
-            <Link to="/"  className="  font-bold"><span className=" ">00</span> <span  className=" font-light px-2">HOME</span></Link>
-            <Link to="/destination"  className="  font-bold"><span className=" ">01</span> <span  className=" font-light px-2">DESTINATION</span></Link>
-            <Link to="/crew"   className="  font-bold"><span className="  ">02</span> <span  className=" font-light px-2">CREW</span></Link>
-            <Link to="/technology"  className="  font-bold"><span className="  ">03</span> <span  className=" font-light px-2">TECHNOLOGY</span></Link>
+            <Link to="/" onClick={()=>clickHandler(1)}  className="  font-bold"><span className=" ">00</span> <span  className=" font-light px-2">HOME</span></Link>
+            <Link to="/destination" onClick={()=>clickHandler(2)}  className="  font-bold"><span className=" ">01</span> <span  className=" font-light px-2">DESTINATION</span></Link>
+            <Link to="/crew" onClick={()=>clickHandler(3)}   className="  font-bold"><span className="  ">02</span> <span  className=" font-light px-2">CREW</span></Link>
+            <Link to="/technology" onClick={()=>clickHandler(4)}  className="  font-bold"><span className="  ">03</span> <span  className=" font-light px-2">TECHNOLOGY</span></Link>
                 </div>
             </div>:""}</div>
             <Link to="/" onClick={()=>clickHandler(1)} style={(active===1)?inLinestyle:{border:null}} className=" hidden sm:block font-bold"><span className=" invisible md:visible">00</span> <span  className=" font-light px-2">HOME</span></Link>

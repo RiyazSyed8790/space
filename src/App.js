@@ -6,7 +6,7 @@ import Technology from "./Components/Technology";
 import Navbar from "./Components/Navbar"
 function App() {
   return (
-    <main className=" h-screen overflow-y-scroll fixed w-full bag-mob sm:bag-tab  md:bag-desk  ">
+    <main id='homescreen' className=" def h-screen overflow-y-scroll fixed w-full bag-mob sm:bag-tab  md:bag-desk  ">
      <Router>
      <Navbar />
      <Routes >

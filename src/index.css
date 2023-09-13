@@ -17,25 +17,53 @@ code {
 
 
 @layer utilities{
-  .bag-tab{
-    background-image: url("./assets/background-home-tablet.jpg");
+  
+  .def{
     width: 100%;
     height: 100%;
   background-position:center;
   background-repeat: no-repeat;
   background-size: cover;
+  }
+  .bag-tab{
+    background-image: url("./assets/background-home-tablet.jpg");
+   
   }
   .bag-desk{
     background-image: url("./assets/background-home-desktop.jpg");
-    background-size: cover;
   }
   .bag-mob{
     background-image: url("./assets/background-home-mobile.jpg");
-    width: 100%;
-    height: 100%;
-  background-position:center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  }
+  /*Destination walpapers*/
+  .bag-dest-desk{
+    background-image: url("./assets/background-destination-desktop.jpg");
+  }
+  .bag-dest-tab{
+    background-image: url("./assets/background-destination-tablet.jpg");
+}
+  .bag-dest-mob{
+    background-image: url("./assets/background-destination-mobile.jpg");
+  }
+  /*Crew walpapers*/
+  .bag-crew-desk{
+    background-image: url("./assets/background-crew-desktop.jpg");
+  }
+  .bag-crew-tab{
+    background-image: url("./assets/background-crew-tablet.jpg");
+  }
+  .bag-crew-mob{
+    background-image: url("./assets/background-crew-mobile.jpg");
+  }
+  /*Technology backs*/
+  .bag-tech-desk{
+    background-image: url("./assets/background-technology-desktop.jpg");
+  }
+  .bag-tech-tab{
+    background-image: url("./assets/background-technology-tablet.jpg");
+  }
+  .bag-tech-mob{
+    background-image: url("./assets/background-technology-mobile.jpg");
   }
   .marg-8{
     padding-left: 2rem/* 32px */;
