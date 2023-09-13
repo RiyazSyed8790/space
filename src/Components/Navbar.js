@@ -23,11 +23,11 @@ export default function Navbar(){
         <SpaceLogo />
         
         <ul style={menu?{}:{paddingLeft:"2rem",paddingRight:"2rem"}} className="flex  justify-end  list-none  child-hover:cursor-pointer px sm:child:mx-4 sm:child:py-4 md:child:py-8 tracking-widest md:tracking-widest    sm:bg-opacity-5 sm:bg-gray-100 sm:backdrop-blur-lg w-[475px] md:w-[830px] h-[96px]  ">
-            <div className="sm:hidden flex justify-end w-10/12 h-[100%]">
+            <div className="sm:hidden flex justify-end w-full h-[100%]">
             <span onClick={menutoggle} style={menu?{display:"none"}:{display:"flex"}}  className="  flex items-center "><MenuLogo /></span>
             {menu?<div  style={menu?{display:"flex"}:{display:"none"}} className="bg-opacity-5  bg-gray-100 backdrop-blur-lg flex-col items-center  px-6 py-6 min-h-screen w-full  ">
                 <span className="flex justify-end py-3  text-xl w-full"><CrossLogo click={menutoggle} /></span>
-                <div className=" my-6 flex flex-col  w-full h-full barlow text-white child:mx-4 child:my-4 ">
+                <div className=" my-6 flex flex-col  w-full h-full barlow text-white child:mx-2 child:my-4 ">
             <Link to="/"  className="  font-bold"><span className=" ">00</span> <span  className=" font-light px-2">HOME</span></Link>
             <Link to="/destination"  className="  font-bold"><span className=" ">01</span> <span  className=" font-light px-2">DESTINATION</span></Link>
             <Link to="/crew"   className="  font-bold"><span className="  ">02</span> <span  className=" font-light px-2">CREW</span></Link>
