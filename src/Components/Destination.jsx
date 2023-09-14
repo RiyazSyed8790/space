@@ -15,7 +15,7 @@ export default function Home(){
        }
     let imgs = [moon,mars,europa,titan];   
     return (
-        <div className="text-white  flex items-center justify-center my-8 md:justify-normal text-center md:text-left md:mx-36 md:my-0">
+        <div className="text-white flex items-center justify-center my-8 md:justify-normal text-center md:text-left md:mx-36 md:my-0">
             <div className=" w-full ">
             <h1 className="barlow text-xl md:text-3xl font-light tracking-widest"><span className=" text-gray-600">01</span> PICK YOUR DESTINATION</h1>
             <div className="w-full   md:flex md:items-center  md:justify-between ">
@@ -45,32 +45,6 @@ export default function Home(){
                     </div>
                 </div>
                 </div>
-                {/* <div className=" left bord w-3/4 flex justify-center">
-                    <img src={moon} className=" w-1/2 h-1/2 my-4 md:my-8 md:w-3/4 md:h-3/4" alt="planet logo"/>
-                </div> */}
-                {/* <div className="right flex  items-start flex-col h-full md:w-full bord ">
-                    <nav>
-                        <ul className="flex text-base text-gray-400 tracking-widest  barlow list-none child:px-4 child-hover:cursor-pointer">
-                            <li>MOON</li>
-                            <li>MARS</li>
-                            <li>EUROPA</li>
-                            <li>TITAN</li>
-                        </ul>
-                    </nav>
-                    <h1 className="belle text-8xl sm:text-9xl my-4" >MOON</h1>
-                    <p className="barlow text-base px-4 sm:px-0 sm:text-lg text-[#D0D6F9] font-light my-4">See our planet as you’ve never seen it before. A perfect relaxing trip away to help regain perspective and come back refreshed. While you’re there, take in some history by visiting the Luna 2 and Apollo 11 landing sites.</p>
-                    <hr className=" text-gray-500"/>
-                    <div className="data flex w-full ">
-                      <div>
-                        <h1 className="text-gray-400 text-base tracking-widest  barlow">AVG. DISTANCE</h1>
-                        <span className="belle text-2xl">384,400 KM</span>
-                      </div>
-                      <div>
-                        <h1 className="text-gray-400 text-base tracking-widest  barlow">AVG. DISTANCE</h1>
-                        <span className="belle text-2xl">384,400 KM</span>
-                      </div>
-                    </div>
-                </div> */}
             </div>
             </div>
         </div>
