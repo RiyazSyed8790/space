@@ -17,25 +17,25 @@ export default function Navbar(){
        //console.log(e);
         setIsActive(e);
         switch(e){
-            case 1,"/":
+            case 1:case "/":
                 document.getElementById("homescreen").classList.add("md:bag-desk","sm:bag-tab","bag-mob");
                 document.getElementById("homescreen").classList.remove("md:bag-dest-desk","sm:bag-dest-tab","bag-dest-mob");
                 document.getElementById("homescreen").classList.remove("md:bag-crew-desk","sm:bag-crew-tab","bag-crew-mob");
                 document.getElementById("homescreen").classList.remove("md:bag-tech-desk","sm:bag-tech-tab","bag-tech-mob");
                 break;
-            case 2,"/destination":
+            case 2:case "/destination":
                 document.getElementById("homescreen").classList.add("md:bag-dest-desk","sm:bag-dest-tab","bag-dest-mob");
                 document.getElementById("homescreen").classList.remove("md:bag-desk","sm:bag-tab","bag-mob");
                 document.getElementById("homescreen").classList.remove("md:bag-crew-desk","sm:bag-crew-tab","bag-crew-mob");
                 document.getElementById("homescreen").classList.remove("md:bag-tech-desk","sm:bag-tech-tab","bag-tech-mob"); 
                 break;  
-            case 3,"/crew":
+            case 3: case"/crew":
                 document.getElementById("homescreen").classList.add("md:bag-crew-desk","sm:bag-crew-tab","bag-crew-mob");
                 document.getElementById("homescreen").classList.remove("md:bag-desk","sm:bag-tab","bag-mob");
                 document.getElementById("homescreen").classList.remove("md:bag-dest-desk","sm:bag-dest-tab","bag-dest-mob");
                 document.getElementById("homescreen").classList.remove("md:bag-tech-desk","sm:bag-tech-tab","bag-tech-mob");
                 break;
-            case 4,"/technology":
+            case 4: case "/technology":
                 document.getElementById("homescreen").classList.add("md:bag-tech-desk","sm:bag-tech-tab","bag-tech-mob");
                 document.getElementById("homescreen").classList.remove("md:bag-desk","sm:bag-tab","bag-mob");
                 document.getElementById("homescreen").classList.remove("md:bag-dest-desk","sm:bag-dest-tab","bag-dest-mob");

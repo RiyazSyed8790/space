@@ -52,7 +52,7 @@ export default function Technology(){
                    </div>
                 </div>
                 <div className="right  my-4 flex justify-center md:justify-end md:my-0 ">
-                    <img src={ww>768?Pics[act-1].potrait:Pics[act-1].landscape} className=" w-full md:w-[90%] h-auto" />
+                    <img src={ww>768?Pics[act-1].potrait:Pics[act-1].landscape} alt="machine-pic" className=" w-full md:w-[90%] h-auto" />
                 </div>
             </div>
             

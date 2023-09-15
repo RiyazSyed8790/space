@@ -35,7 +35,7 @@ export default function Home(){
                   </nav>
                 </div>
                 <div className="right flex justify-center md:justify-end  my-4 md:my-0">
-                    <img src={pics[white-1]} className=" w-2/3 h-auto" />
+                    <img src={pics[white-1]} alt="person-pic" className=" w-2/3 h-auto" />
                 </div>
             </div>
         </div>

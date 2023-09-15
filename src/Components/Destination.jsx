@@ -20,7 +20,7 @@ export default function Home(){
             <h1 className="barlow text-xl md:text-3xl font-light tracking-widest"><span className=" text-gray-600">01</span> PICK YOUR DESTINATION</h1>
             <div className="w-full   md:flex md:items-center  md:justify-between ">
                 <div className="left  flex justify-center my-8 md:my-10">
-                    <img src={imgs[act-1]}  className="w-1/2 h-1/2 md:w-3/4 md:h-3/4 rotat" />
+                    <img src={imgs[act-1]} alt="planet-pic"  className="w-1/2 h-1/2 md:w-3/4 md:h-3/4 rotat" />
                 </div>
                 <div className="right  flex md:max-w-[450px]  items-center md:items-start flex-col">
                 <nav>
