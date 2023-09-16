@@ -7,7 +7,7 @@ export default function Navbar(){
    const [active,setIsActive] = React.useState(1);
    const [menu,setMenu] = React.useState(false);
    let inLinestyle= {
-    borderBottom:"2px solid white"
+    borderBottom:"2px solid white",
    }
    React.useEffect(function(){
     clickHandler(window.location.pathname);
@@ -54,7 +54,8 @@ export default function Navbar(){
     <nav className="flex  md:my-10 text-white text-base md:text-xl  justify-between items-center">
         <SpaceLogo />
         
-        <ul style={menu?{}:{paddingLeft:"2rem",paddingRight:"2rem"}} className="flex  justify-end  list-none  child-hover:cursor-pointer px sm:child:mx-4 sm:child:py-4 md:child:py-8 tracking-widest md:tracking-widest    sm:bg-opacity-5 sm:bg-gray-100 sm:backdrop-blur-lg w-[475px] md:w-[830px] h-[96px]  ">
+        <ul style={menu?{}:{paddingLeft:"2rem",paddingRight:"2rem"}} className="flex  justify-end  list-none  child-hover:cursor-pointer  sm:child:mx-4 sm:child:py-4 md:child:py-8 tracking-widest md:tracking-widest    sm:bg-opacity-5 sm:bg-gray-100 sm:backdrop-blur-lg w-[475px] md:w-[830px] h-[96px]  ">
+            <li>
             <div className="sm:hidden flex justify-end w-full h-[100%]">
             <span onClick={menutoggle} style={menu?{display:"none"}:{display:"flex"}}  className="  flex items-center "><MenuLogo /></span>
             {menu?<div  style={menu?{display:"flex"}:{display:"none"}} className="bg-opacity-5 z-10  bg-gray-100 backdrop-blur-lg flex-col items-center  px-6 py-6 min-h-screen w-full  ">
@@ -65,11 +66,13 @@ export default function Navbar(){
             <Link to="/crew" onClick={()=>clickHandler(3)}   className="  font-bold"><span className="  ">02</span> <span  className=" font-light px-2">CREW</span></Link>
             <Link to="/technology" onClick={()=>clickHandler(4)}  className="  font-bold"><span className="  ">03</span> <span  className=" font-light px-2">TECHNOLOGY</span></Link>
                 </div>
-            </div>:""}</div>
-            <Link to="/" onClick={()=>clickHandler(1)} style={(active==="/")?inLinestyle:{border:null}} className=" hidden sm:block font-bold"><span className=" invisible md:visible">00</span> <span  className=" font-light px-2">HOME</span></Link>
-            <Link to="/destination" onClick={()=>clickHandler(2)} style={(active==="/destination")?inLinestyle:{border:null}} className=" hidden sm:block font-bold"><span className=" invisible md:visible">01</span> <span  className=" font-light px-2">DESTINATION</span></Link>
-            <Link to="/crew" onClick={()=>clickHandler(3)} style={(active==="/crew")?inLinestyle:{border:null}}  className=" hidden sm:block font-bold"><span className="  invisible md:visible">02</span> <span  className=" font-light px-2">CREW</span></Link>
-            <Link to="/technology" onClick={()=>clickHandler(4)} style={(active==="/technology")?inLinestyle:{border:null}} className=" hidden sm:block font-bold"><span className="  invisible md:visible">03</span> <span  className=" font-light px-2">TECHNOLOGY</span></Link>
+            </div>:""}
+            </div>
+            </li>
+        <li onClick={()=>clickHandler(1)} style={(active==="/")?inLinestyle:{border:null}}>    <Link to="/"  className=" hidden sm:block font-bold"><span className=" invisible md:visible">00</span> <span  className=" font-light  px-2">HOME</span></Link> </li>
+        <li onClick={()=>clickHandler(2)} style={(active==="/destination")?inLinestyle:{border:null}}>    <Link to="/destination"  className=" hidden sm:block font-bold"><span className=" invisible md:visible">01</span> <span  className=" font-light px-2">DESTINATION</span></Link> </li>
+        <li onClick={()=>clickHandler(3)} style={(active==="/crew")?inLinestyle:{border:null}}>     <Link to="/crew"   className=" hidden sm:block font-bold"><span className="  invisible md:visible">02</span> <span  className=" font-light px-2">CREW</span></Link> </li>
+        <li onClick={()=>clickHandler(4)} style={(active==="/technology")?inLinestyle:{border:null}}>     <Link to="/technology"  className=" hidden sm:block font-bold"><span className="  invisible md:visible">03</span> <span  className=" font-light px-2">TECHNOLOGY</span></Link> </li>
         </ul>
     </nav>
     )
